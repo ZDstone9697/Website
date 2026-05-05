@@ -1,0 +1,163 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Lumina Dental Studio Design Tokens - Premium High-End Aesthetic */
+  
+  /* Primary Brand Colors */
+  --color-coral: #FF6F61;
+  --color-coral-light: #FF8A7F;
+  --color-coral-hover: rgba(255, 111, 97, 0.05);
+  --color-charcoal: #1A1A1B;
+  --color-midnight: #121212;
+  --color-linen: #FAF9F6;
+  --color-paper: #F5F4F1;
+  --color-white: #FFFFFF;
+  
+  /* Text Colors */
+  --color-text-primary: #1A1A1B;
+  --color-text-secondary: #64748B;
+  --color-text-inverse: #FFFFFF;
+  
+  /* Utility Colors */
+  --color-divider: #E2E8F0;
+  --color-success: #10B981;
+  --color-error: #EF4444;
+  
+  /* Token Mappings */
+  --background: #FAF9F6;
+  --foreground: #1A1A1B;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1B;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1B;
+  --primary: #FF6F61;
+  --primary-foreground: #FFFFFF;
+  --secondary: #121212;
+  --secondary-foreground: #FFFFFF;
+  --muted: #F5F4F1;
+  --muted-foreground: #64748B;
+  --accent: #FF6F61;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #E2E8F0;
+  --input: #F5F4F1;
+  --ring: #FF6F61;
+  --chart-1: #FF6F61;
+  --chart-2: #1A1A1B;
+  --chart-3: #64748B;
+  --chart-4: #10B981;
+  --chart-5: #F5F4F1;
+  --radius: 0.75rem;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A1A1B;
+  --sidebar-primary: #FF6F61;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F5F4F1;
+  --sidebar-accent-foreground: #1A1A1B;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #FF6F61;
+}
+
+.dark {
+  --background: #1A1A1B;
+  --foreground: #FFFFFF;
+  --card: #2D2D2E;
+  --card-foreground: #FFFFFF;
+  --popover: #1A1A1B;
+  --popover-foreground: #FFFFFF;
+  --primary: #FF6F61;
+  --primary-foreground: #FFFFFF;
+  --secondary: #2D2D2E;
+  --secondary-foreground: #FFFFFF;
+  --muted: #3F3F40;
+  --muted-foreground: #A0A0A1;
+  --accent: #FF6F61;
+  --accent-foreground: #FFFFFF;
+  --destructive: #FF5A4F;
+  --destructive-foreground: #FFFFFF;
+  --border: #3F3F40;
+  --input: #2D2D2E;
+  --ring: #FF6F61;
+  --chart-1: #FF6F61;
+  --chart-2: #FFFFFF;
+  --chart-3: #A0A0A1;
+  --chart-4: #10B981;
+  --chart-5: #2D2D2E;
+  --sidebar: #1A1A1B;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #FF6F61;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #2D2D2E;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #3F3F40;
+  --sidebar-ring: #FF6F61;
+}
+
+/* Premium Gradient Utility Classes */
+@layer utilities {
+  .bg-linen-gradient {
+    @apply bg-gradient-to-b from-[#FAF9F6] to-[#F2F0EA];
+  }
+  
+  .shadow-premium {
+    @apply shadow-sm;
+  }
+  
+  .btn-coral-premium {
+    @apply relative inline-flex items-center justify-center bg-[#FF6F61] text-white border border-[#FF8A7F] rounded-lg font-semibold transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,111,97,0.4)] hover:bg-[#FF5A4F];
+  }
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
